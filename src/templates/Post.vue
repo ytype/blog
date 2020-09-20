@@ -2,6 +2,7 @@
   <Layout>
     <div class="has-text-centered">
       <h1 class="title is-1">
+        category: {{ $page.post.category.title }}
         {{ $page.post.title }}
       </h1>
       <PostMeta
@@ -35,13 +36,13 @@
 </template>
 
 <script>
-import PostMeta from '~/components/PostMeta';
-import PostTags from '~/components/PostTags';
+import PostMeta from '~/components/PostMeta'
+import PostTags from '~/components/PostTags'
 
 export default {
   components: {
     PostMeta,
-    PostTags,
+    PostTags
   },
   metaInfo() {
     return {
@@ -49,20 +50,24 @@ export default {
       meta: [
         {
           name: 'description',
-          content: this.$page.post.description,
-        },
-      ],
-    };
-  },
-};
+          content: this.$page.post.description
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
+query Post($id: ID!) {
+  post: post(id: $id) {
     title
+    category {
+      id
+      title
+    }
     path
-    date (format: "D. MMMM YYYY")
+    date(format: "D. MMMM YYYY")
     timeToRead
     tags {
       id
@@ -71,7 +76,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
+    cover_image(width: 860, blur: 10)
   }
 }
 </page-query>

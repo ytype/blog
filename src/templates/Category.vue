@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <h1 class="title is-size-1 has-text-centered">
-      # {{ $page.tag.title }}
+      # {{ $page.category.title }}
     </h1>
 
     <div class="posts">
       <PostCard
-        v-for="edge in $page.tag.belongsTo.edges"
+        v-for="edge in $page.category.belongsTo.edges"
         :key="edge.node.id"
         :post="edge.node"
       />
@@ -15,8 +15,8 @@
 </template>
 
 <page-query>
-query Tag($id: ID!) {
-  tag(id: $id) {
+query Category($id: ID!) {
+  category(id: $id) {
     title
     belongsTo {
       edges {

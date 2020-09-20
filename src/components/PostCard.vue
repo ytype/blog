@@ -38,21 +38,21 @@
 </template>
 
 <script>
-import PostMeta from '~/components/PostMeta';
-import PostTags from '~/components/PostTags';
+import PostMeta from '~/components/PostMeta'
+import PostTags from '~/components/PostTags'
 
 export default {
   components: {
     PostMeta,
-    PostTags,
+    PostTags
   },
   props: {
     post: {
       type: Object,
       default() {
-        return {};
-      },
-    },
-  },
-};
+        return {}
+      }
+    }
+  }
+}
 </script>

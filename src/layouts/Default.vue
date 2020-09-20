@@ -56,20 +56,20 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
+import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
-    Logo,
+    Logo
   },
   props: {
     showLogo: {
       type: Boolean,
-      default: true,
-    },
+      default: true
+    }
   },
   data: () => ({
-    showNav: false,
-  }),
-};
+    showNav: false
+  })
+}
 </script>

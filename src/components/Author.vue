@@ -27,8 +27,8 @@ export default {
   props: {
     showTitle: {
       type: Boolean,
-      default: true,
-    },
-  },
-};
+      default: true
+    }
+  }
+}
 </script>
