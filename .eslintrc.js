@@ -8,8 +8,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:vue/recommended',
-    'plugin:gridsome/recommended'
+    'plugin:vue/recommended'
   ],
   rules: {
     semi: [2, "never"],
