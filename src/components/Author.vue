@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <hr
-      class="top"
+      class="top first"
       style="margin-left: 15%;"
     >
     <g-image
@@ -10,7 +10,7 @@
       src="~/assets/images/logo-square.png"
     />
     <hr
-      class="top"
+      class="top second"
     >
     <div class="content has-text-centered">
       <p>A baseline Gridsome starter to get you going with Bulma.</p>
@@ -44,5 +44,21 @@
   width: 20%;
   max-width: 100px;
   height: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .author-image {
+    display: none;
+  }
+  .first {
+    margin-left: 15%;
+  display: inline-block;
+  width: 70%;
+  vertical-align: middle;
+  border: 1px solid #202020;
+  }
+  .second {
+    display: none;
+  }
 }
 </style>
