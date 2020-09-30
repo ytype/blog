@@ -17,7 +17,7 @@
 
 <page-query>
 query {
-  allTag {
+  allCategory {
     edges {
       node {
         id
